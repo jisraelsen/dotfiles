@@ -1,0 +1,19 @@
+color jellybeans
+
+" Press Space to turn off highlighting and clear any message already
+" displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Press F4 to toggle highlighting on/off, and show current value.
+:noremap <F4> :set hlsearch! hlsearch?<CR>
+
+" add jbuilder syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
+" add rubocop syntax checker
+let g:syntastic_ruby_checkers = ['rubocop']
+
+let NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['.git\/', 'coverage', 'tmp', '.test_queue_stats', '.byebug_history', '.DS_Store', '.editorconfig']
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_custom_ignore = '\.git\/\|coverage\|tmp\|\.test_queue_stats\|\.byebug_history\|\.DS_Store\|\.editorconfig'

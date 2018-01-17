@@ -1,0 +1,42 @@
+[user]
+  name = Jeremy Israelsen
+  email = jisraelsen@gmail.com
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+  ls = branch
+  s = status
+  a = add
+  b = branch
+  d = diff
+  dc = diff --cached
+  v = show
+  l = log --pretty=oneline
+  ll = log
+  cp = cherry-pick
+  c = checkout
+  cc = commit
+  ri = rebase -i HEAD~10
+  sh = !git-sh
+  ro = !git fetch origin && git reset --hard origin/master
+[color]
+  ui = true
+  interactive = true
+  status = true
+  branch = true
+  diff = true
+[core]
+  excludesfile = ~/.gitignore
+  whitespace = trailing-space,space-before-tab
+[apply]
+  whitespace = fix
+[pull]
+  rebase = true
+[push]
+  default = simple
+[diff "ansible-vault"]
+	textconv = ansible-vault view
+[github]
+  user = jisraelsen
