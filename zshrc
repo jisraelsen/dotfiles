@@ -63,7 +63,6 @@ plugins=(
   brew
   dotenv
   git
-  nvm
   rbenv
 )
 
