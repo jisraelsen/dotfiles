@@ -90,3 +90,6 @@ xcuserdata/
 
 
 # End of https://www.gitignore.io/api/svn,vim,linux,macos,xcode
+
+## Custom ##
+.node-version

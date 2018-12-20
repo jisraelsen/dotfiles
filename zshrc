@@ -63,6 +63,7 @@ plugins=(
   brew
   dotenv
   git
+  nodenv # https://github.com/ELLIOTTCABLE/nodenv.plugin.zsh
   rbenv
 )
 
