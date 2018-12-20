@@ -109,3 +109,9 @@ unalias 6
 unalias 7
 unalias 8
 unalias 9
+
+# harvest
+eval "$($HOME/.8/bin/8 init -)"
+export HARVEST_API_ID_HOST='harvest-id.localhost'
+export HARVEST_ID_HOST='harvest-id.localhost'
+[ -f ~/code/harvesthq/docker-dev/aliases.sh ] && source ~/code/harvesthq/docker-dev/aliases.sh
