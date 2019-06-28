@@ -14,6 +14,6 @@ au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 let g:syntastic_ruby_checkers = ['rubocop']
 
 let NERDTreeShowHidden = 1
-let g:NERDTreeIgnore = ['.git\/', 'coverage', 'tmp', '.test_queue_stats', '.byebug_history', '.DS_Store', '.editorconfig']
+let g:NERDTreeIgnore = ['.git', 'coverage', 'node_modules', 'private', 'tmp', '.test_queue_stats', '.byebug_history', '.DS_Store', '.editorconfig']
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = '\.git\/\|coverage\|tmp\|\.test_queue_stats\|\.byebug_history\|\.DS_Store\|\.editorconfig'
+let g:ctrlp_custom_ignore = '\.git\|coverage\|node_modules\|private\|tmp\|\.test_queue_stats\|\.byebug_history\|\.DS_Store\|\.editorconfig'
