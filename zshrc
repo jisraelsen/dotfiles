@@ -110,6 +110,9 @@ unalias 7
 unalias 8
 unalias 9
 
+# ruby
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # harvest
 eval "$($HOME/.8/bin/8 init -)"
 export HARVEST_API_ID_HOST='harvest-id.localhost'
