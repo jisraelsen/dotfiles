@@ -114,7 +114,6 @@ unalias 9
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # harvest
-eval "$($HOME/.8/bin/8 init -)"
+[ -d $HOME/.8 ] && eval "$($HOME/.8/bin/8 init -)"
 export HARVEST_API_ID_HOST='harvest-id.localhost'
 export HARVEST_ID_HOST='harvest-id.localhost'
-[ -f ~/code/harvesthq/docker-dev/aliases.sh ] && source ~/code/harvesthq/docker-dev/aliases.sh
