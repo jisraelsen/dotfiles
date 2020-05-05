@@ -92,4 +92,13 @@ xcuserdata/
 # End of https://www.gitignore.io/api/svn,vim,linux,macos,xcode
 
 ## Custom ##
+.bash_history
+.bundle/
+.cache/
+.config/
+.local/
 .node-version
+.npm/
+.pki/
+.webdrivers/
+Procfile.dev
