@@ -13,6 +13,8 @@ au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 " add rubocop syntax checker
 " let g:syntastic_ruby_checkers = ['rubocop']
 
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 let NERDTreeShowHidden = 1
 let g:NERDTreeIgnore = ['.git$', 'coverage', 'node_modules', 'private', 'storage$', 'tmp', '.test_queue_stats', '.byebug_history', '.DS_Store', '.editorconfig']
 let g:ctrlp_show_hidden = 1
