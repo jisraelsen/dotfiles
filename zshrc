@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.rbenv/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -59,12 +61,14 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  bundler
   brew
-  dotenv
+  docker
+  docker-compose
   git
-  nodenv # https://github.com/ELLIOTTCABLE/nodenv.plugin.zsh
+  github
+  heroku
   rbenv
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,6 +102,7 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias fixcamera='sudo killall AppleCameraAssistant; sudo killall VDCAssistant'
 
 # Remove some aliases
 unalias 1
@@ -117,3 +122,10 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 [ -d $HOME/.8 ] && eval "$($HOME/.8/bin/8 init -)"
 export HARVEST_API_ID_HOST='harvest-id.localhost'
 export HARVEST_ID_HOST='harvest-id.localhost'
+
+# google-cloud
+if [ -d /usr/local/Caskroom/google-cloud-sdk ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
