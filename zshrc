@@ -118,11 +118,6 @@ unalias 9
 # ruby
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-# harvest
-[ -d $HOME/.8 ] && eval "$($HOME/.8/bin/8 init -)"
-export HARVEST_API_ID_HOST='harvest-id.localhost'
-export HARVEST_ID_HOST='harvest-id.localhost'
-
 # google-cloud
 if [ -d /usr/local/Caskroom/google-cloud-sdk ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
