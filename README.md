@@ -17,8 +17,10 @@ git clone git://github.com/jisraelsen/dotfiles ~/.dotfiles
 Symlink dotfiles using rcm
 
 ```terminal
-rcup
+env RCRC=$HOME/.dotfiles/rcrc rcup
 ```
+
+After the initialization, you can run `rcup` without the one-time variable RCRC being set.
 
 Install Oh My ZSH
 
