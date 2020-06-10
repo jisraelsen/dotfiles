@@ -2,6 +2,10 @@ if &compatible
   set nocompatible  " Be iMproved
 end
 
+" Per-directory .vimrc files
+set exrc
+set secure
+
 
 ""
 "" Plugins
@@ -9,7 +13,7 @@ end
 " Install vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -17,7 +21,9 @@ endif
 call plug#begin('~/.vim/bundle')
 Plug 'ap/vim-css-color'
 Plug 'chrisbra/csv.vim'
+Plug 'dense-analysis/ale'
 Plug 'depuracao/vim-rdoc'
+Plug 'endel/vim-github-colorscheme'
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
 Plug 'mmalecki/vim-node.js'
@@ -27,7 +33,7 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'sheerun/vim-polyglot'
 Plug 'shumphrey/fugitive-gitlab.vim'
 Plug 'sunaku/vim-ruby-minitest'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
@@ -39,28 +45,64 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/tComment'
-Plug 'vim-syntastic/syntastic'
+Plug 'yggdroot/indentline'
 call plug#end()
 
-" fzf with ctrlp binding
+" ale
+let g:ale_fixers = {
+      \  'ruby': ['trim_whitespace','standardrb'],
+      \}
+let g:ale_fix_on_save = 1
+
+" fzf
+" show hidden files
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+" use ctrl-a instead of alt-a
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+let g:fzf_action = {
+      \ 'ctrl-q': function('s:build_quickfix_list'),
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit' }
+
+" use ctrlp binding
 nnoremap <c-p> :FZF<cr>
 
-" vim-test strategy
+" indentline enabled
+let g:indentLine_enabled = 1
+
+" vim-test
+let g:test#preserve_screen = 1
 let test#strategy = {
-  \ 'nearest': 'vimterminal',
-  \ 'file':    'vimterminal',
-  \ 'suite':   'terminal',
-\}
+      \  'nearest': 'dispatch',
+      \  'file':    'dispatch',
+      \  'suite':   'terminal',
+      \}
+
+nnoremap <leader>tn :TestNearest<CR>
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>ts :TestSuite<CR>
+nnoremap <leader>tl :TestLast<CR>
+nnoremap <leader>tv :TestVisit<CR>
 
 
 ""
 "" Colors
 ""
-color jellybeans
+colorscheme jellybeans " dark color scheme
+" colorscheme github     " light color scheme
 
 " increase font size in macvim
 if has('gui_running')
-  set guifont=Monaco:h14 noanti
+  " set guifont=Monaco:h16 anti
+  set guifont=RobotoMono-Regular:h16 anti
 endif
 
 ""
