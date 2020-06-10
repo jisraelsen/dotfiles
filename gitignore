@@ -97,7 +97,6 @@ xcuserdata/
 .cache/
 .config/
 .local/
-.node-version
 .npm/
 .pki/
 .webdrivers/
