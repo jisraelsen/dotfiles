@@ -6,6 +6,13 @@ end
 set exrc
 set secure
 
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
 
 ""
 "" Plugins
@@ -50,8 +57,13 @@ call plug#end()
 
 " ale
 let g:ale_fixers = {
-      \  'ruby': ['trim_whitespace','standardrb'],
+      \  '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \  'javascript': ['remove_trailing_lines', 'trim_whitespace', 'eslint'],
+      \  'ruby': ['remove_trailing_lines', 'trim_whitespace', 'standardrb'],
+      \  'typescript': ['remove_trailing_lines', 'trim_whitespace', 'eslint'],
       \}
+let g:ale_javascript_prettier_use_global = 1
+let g:ale_javascript_prettier_options = '--print-width 120 --ruby-single-quote false'
 let g:ale_fix_on_save = 1
 
 " fzf
@@ -78,11 +90,14 @@ nnoremap <c-p> :FZF<cr>
 " indentline enabled
 let g:indentLine_enabled = 1
 
+" vim-markdown (vim-polyglot)
+let g:vim_markdown_conceal = 0
+
 " vim-test
 let g:test#preserve_screen = 1
 let test#strategy = {
-      \  'nearest': 'dispatch',
-      \  'file':    'dispatch',
+      \  'nearest': 'vimterminal',
+      \  'file':    'vimterminal',
       \  'suite':   'terminal',
       \}
 
@@ -130,8 +145,12 @@ set textwidth=100
 set colorcolumn=+1
 
 " Make netrw work like NERDTree
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 
 ""

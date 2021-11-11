@@ -62,6 +62,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   brew
+  direnv
   docker
   docker-compose
   git
@@ -126,3 +127,6 @@ fi
 # enable docker's buildkit
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(nodenv init -)"

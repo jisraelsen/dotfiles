@@ -91,6 +91,9 @@ xcuserdata/
 
 # End of https://www.gitignore.io/api/svn,vim,linux,macos,xcode
 
+## Ignore direnv
+.envrc
+
 ## Custom ##
 .bash_history
 .bundle/
@@ -101,3 +104,4 @@ xcuserdata/
 .pki/
 .webdrivers/
 Procfile.dev
+todo.txt

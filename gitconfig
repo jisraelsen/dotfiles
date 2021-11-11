@@ -1,6 +1,7 @@
 [user]
   name = Jeremy Israelsen
   email = jisraelsen@gmail.com
+	signingkey = CDD3146417D16C91
 [alias]
   st = status
   ci = commit
@@ -47,3 +48,11 @@
 	required = true
 [credential]
 	helper = osxkeychain
+[diff "sopsdiffer"]
+	textconv = sops -d
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[maintenance]
+	repo = /Users/jisraelsen/Code/github/github
