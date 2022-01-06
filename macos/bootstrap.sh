@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -o nounset -o pipefail -o errexit
+set -e
 
 echo "##########################"
 echo "### Command Line Tools ###"
