@@ -32,10 +32,10 @@ echo "################\n"
 if [ -d "$HOME/.dotfiles" ]; then
 	echo "Already installed."
 	echo "Updating..."
-	~/.dotfiles/install.sh
+	~/.dotfiles/script/setup
 else
 	echo "Installing..."
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/jisraelsen/dotfiles/main/install.sh)"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/jisraelsen/dotfiles/main/script/setup)"
 fi 
 
 echo "\n################"
