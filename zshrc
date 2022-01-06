@@ -102,7 +102,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias fixcamera='sudo killall AppleCameraAssistant; sudo killall VDCAssistant'
 
 # Remove some aliases
 unalias 1
