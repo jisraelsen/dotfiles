@@ -29,13 +29,15 @@ echo "\n################"
 echo "### Dotfiles ###"
 echo "################\n"
 
-if [ -d "$HOME/.dotfiles" ]; then
+DOTFILES="$HOME/.dotfiles"
+
+if [ -d $DOTFILES ]; then
 	echo "Already installed."
 	echo "Updating..."
-	~/.dotfiles/script/setup
+	(cd $DOTFILES && git pull && script/setup)
 else
 	echo "Installing..."
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/jisraelsen/dotfiles/main/script/setup)"
+	git clone https://github.com/jisraelsen/dotfiles.git $DOTFILES
 fi 
 
 echo "\n################"
