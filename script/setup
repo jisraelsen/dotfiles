@@ -2,17 +2,18 @@
 
 set -e
 
-DOTFILES="$HOME/.dotfiles"
+cd $(dirname $0)/..
+DOTFILES=$(pwd -P)
 
 echo "Symlinking dotfiles..."
-ln -fs "$DOTFILES/ackrc" ~/.ackrc
-ln -fs "$DOTFILES/curlrc" ~/.curlrc
-ln -fs "$DOTFILES/gemrc" ~/.gemrc
-ln -fs "$DOTFILES/gitconfig" ~/.gitconfig
-ln -fs "$DOTFILES/gitignore" ~/.gitignore
-ln -fs "$DOTFILES/vimrc" ~/.vimrc
-ln -fs "$DOTFILES/zshrc" ~/.zshrc
+ln -fs $DOTFILES/ackrc $HOME/.ackrc
+ln -fs $DOTFILES/curlrc $HOME/.curlrc
+ln -fs $DOTFILES/gemrc $HOME/.gemrc
+ln -fs $DOTFILES/gitconfig $HOME/.gitconfig
+ln -fs $DOTFILES/gitignore $HOME/.gitignore
+ln -fs $DOTFILES/vimrc $HOME/.vimrc
+ln -fs $DOTFILES/zshrc $HOME/.zshrc
 
 if [ "$(uname -s)" = "Darwin" ]; then
-	ln -fs "$DOTFILES/Brewfile" ~/Brewfile
+	ln -fs $DOTFILES/Brewfile $HOME/Brewfile
 fi
