@@ -8,10 +8,11 @@ Install dotfiles
 
 ```terminal
 git clone https://github.com/jisraelsen/dotfiles.git ~/.dotfiles
+~/.dotfiles/script/setup
 ```
 
-Symlink dotfiles
+Update dotfiles
 
 ```terminal
-~/.dotfiles/script/setup
+(cd ~/.dotfiles && git pull && script/setup)
 ```
