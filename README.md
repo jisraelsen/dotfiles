@@ -14,5 +14,6 @@ git clone https://github.com/jisraelsen/dotfiles.git ~/.dotfiles
 Update dotfiles
 
 ```terminal
-(cd ~/.dotfiles && git pull && script/setup)
+cd ~/.dotfiles
+git pull && script/setup
 ```
