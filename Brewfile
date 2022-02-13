@@ -47,7 +47,7 @@ brew "wget"
 brew "zsh"
 
 mas "Brother iPrint&Scan", id: 1193539993
-mas "Deliveries", id: 924726344
+mas "Deliveries: a package tracker", id: 290986013
 mas "GarageBand", id: 682658836
 mas "GIF Brewery 3", id: 1081413713
 mas "iMovie", id: 408981434
