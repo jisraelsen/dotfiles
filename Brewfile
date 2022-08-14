@@ -20,6 +20,7 @@ cask "moom"
 cask "obsidian"
 cask "slack"
 cask "steam"
+cask "strongvpn"
 cask "telegram"
 cask "the-unarchiver"
 cask "transmit"
@@ -59,5 +60,4 @@ mas "Keynote", id: 409183694
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Surfshark", id: 1437809329
 # mas "Xcode", id: 497799835
