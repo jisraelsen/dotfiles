@@ -7,6 +7,7 @@ cask "appcleaner"
 cask "discord"
 cask "docker"
 cask "exodus"
+cask "expressvpn"
 cask "firefox"
 cask "google-chrome"
 cask "google-drive"
@@ -20,7 +21,6 @@ cask "moom"
 cask "obsidian"
 cask "slack"
 cask "steam"
-cask "strongvpn"
 cask "telegram"
 cask "the-unarchiver"
 cask "transmit"
@@ -51,8 +51,6 @@ brew "watch"
 brew "wget"
 brew "zsh"
 
-mas "Brother iPrint&Scan", id: 1193539993
-mas "Deliveries: a package tracker", id: 290986013
 mas "GarageBand", id: 682658836
 mas "GIF Brewery 3", id: 1081413713
 mas "iMovie", id: 408981434
