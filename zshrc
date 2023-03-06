@@ -4,6 +4,7 @@ export GOROOT=/usr/local/opt/go/libexec
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:$HOME/.pub-cache/bin
 export PATH=$HOME/bin:$PATH
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
