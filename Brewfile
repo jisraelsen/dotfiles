@@ -26,6 +26,7 @@ cask "the-unarchiver"
 cask "transmit"
 cask "virtualbox"
 cask "visual-studio-code"
+cask "whatsapp"
 cask "zoom"
 
 brew "ack"
