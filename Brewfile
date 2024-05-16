@@ -47,7 +47,6 @@ brew "wget"
 brew "zsh"
 
 mas "GarageBand", id: 682658836
-mas "GIF Brewery 3", id: 1081413713
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Monosnap", id: 540348655
