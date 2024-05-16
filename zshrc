@@ -74,6 +74,7 @@ plugins=(
   git
   github
   heroku
+  nodenv
   rbenv
   yarn
 )
@@ -135,4 +136,3 @@ export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-(( $+commands[nodenv] )) && eval "$(nodenv init -)"
