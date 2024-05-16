@@ -126,11 +126,6 @@ unalias 9
 # ruby
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-# google-cloud
-if [ -d /usr/local/Caskroom/google-cloud-sdk ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-fi
-
 # enable docker's buildkit
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
