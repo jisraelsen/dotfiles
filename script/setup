@@ -15,5 +15,5 @@ ln -fs $DOTFILES/vimrc $HOME/.vimrc
 ln -fs $DOTFILES/zshrc $HOME/.zshrc
 
 if [ "$(uname -s)" = "Darwin" ]; then
-	ln -fs $DOTFILES/Brewfile $HOME/Brewfile
+	ln -fs $DOTFILES/Brewfile $HOME/.Brewfile
 fi
