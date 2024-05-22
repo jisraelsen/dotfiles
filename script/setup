@@ -11,6 +11,7 @@ ln -fs $DOTFILES/curlrc $HOME/.curlrc
 ln -fs $DOTFILES/gemrc $HOME/.gemrc
 ln -fs $DOTFILES/gitconfig $HOME/.gitconfig
 ln -fs $DOTFILES/gitignore $HOME/.gitignore
+ln -fs $DOTFILES/mackup.cfg $HOME/.mackup.cfg
 ln -fs $DOTFILES/vimrc $HOME/.vimrc
 ln -fs $DOTFILES/zshrc $HOME/.zshrc
 
