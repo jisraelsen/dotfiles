@@ -4,10 +4,13 @@ export GOROOT=/usr/local/opt/go/libexec
 
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.pub-cache/bin
+export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/bin:$PATH
+export PATH=$PATH:$HOME/.pub-cache/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+typeset -U PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
