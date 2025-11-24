@@ -3,7 +3,6 @@ tap "homebrew/services"
 
 cask "1password"
 cask "appcleaner"
-cask "bartender"
 cask "docker"
 cask "elgato-camera-hub"
 cask "expressvpn"
